@@ -1,0 +1,90 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_heading": {
+      "type": "string"
+    },
+    "hero_subheading": {
+      "type": "text"
+    },
+    "hero_button_text": {
+      "type": "string"
+    },
+    "about_heading": {
+      "type": "string"
+    },
+    "about_content": {
+      "type": "richtext"
+    },
+    "offer_heading": {
+      "type": "string"
+    },
+    "services_heading": {
+      "type": "string"
+    },
+    "services_subheading": {
+      "type": "text"
+    },
+    "services_text": {
+      "type": "text"
+    },
+    "requirements_heading": {
+      "type": "string"
+    },
+    "comparison_heading": {
+      "type": "string"
+    },
+    "comparison_subheading": {
+      "type": "text"
+    },
+    "testimonial_heading": {
+      "type": "string"
+    },
+    "steps_heading": {
+      "type": "string"
+    },
+    "step_1": {
+      "type": "text"
+    },
+    "step_2": {
+      "type": "text"
+    },
+    "step_3": {
+      "type": "text"
+    },
+    "footer_content": {
+      "type": "richtext"
+    },
+    "hero_button_link": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string"
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "facebook_link": {
+      "type": "string"
+    },
+    "instagram_link": {
+      "type": "string"
+    },
+    "youtube_link": {
+      "type": "string"
+    },
+    "twitter_link": {
+      "type": "string"
+    }
+  }
+}
