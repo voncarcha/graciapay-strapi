@@ -1,0 +1,188 @@
+{
+  "kind": "collectionType",
+  "collectionName": "merchant_forms",
+  "info": {
+    "singularName": "merchant-form",
+    "pluralName": "merchant-forms",
+    "displayName": "Merchant Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "businessName": {
+      "type": "string"
+    },
+    "brandName": {
+      "type": "string"
+    },
+    "registrationType": {
+      "type": "string"
+    },
+    "natureOfBusiness": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "registrationNumber": {
+      "type": "string"
+    },
+    "tin": {
+      "type": "string"
+    },
+    "registrationDate": {
+      "type": "date"
+    },
+    "countryOfRegistration": {
+      "type": "string"
+    },
+    "businessAddress": {
+      "type": "text"
+    },
+    "cityProvince": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "integer"
+    },
+    "businessPhoneNumber": {
+      "type": "string"
+    },
+    "businessEmail": {
+      "type": "email"
+    },
+    "websiteOrSocial": {
+      "type": "string"
+    },
+    "ownerFullName": {
+      "type": "string"
+    },
+    "ownerDesignation": {
+      "type": "string"
+    },
+    "ownerDateOfBirth": {
+      "type": "date"
+    },
+    "ownerMobileNumber": {
+      "type": "string"
+    },
+    "ownerEmail": {
+      "type": "email"
+    },
+    "idType": {
+      "type": "string"
+    },
+    "idNumber": {
+      "type": "string"
+    },
+    "idIssuanceDate": {
+      "type": "date"
+    },
+    "idExpirationDate": {
+      "type": "date"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "bankAccountName": {
+      "type": "string"
+    },
+    "bankAccountNumber": {
+      "type": "string"
+    },
+    "bankBranch": {
+      "type": "string"
+    },
+    "paymentChannels": {
+      "type": "text"
+    },
+    "estimatedMonthlySalesPhp": {
+      "type": "integer"
+    },
+    "averageTransactionValuePhp": {
+      "type": "integer"
+    },
+    "projectedTransactionsPerMonth": {
+      "type": "integer"
+    },
+    "ownerIdFiles": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "businessRegFiles": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "mayorOrBarangayFiles": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "bir2303Files": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "bankCertificateFiles": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "receiptOrInvoiceFiles": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "businessLogoFiles": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "productPhotosFiles": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "consentFullName": {
+      "type": "string"
+    },
+    "consentDate": {
+      "type": "date"
+    },
+    "signatureFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

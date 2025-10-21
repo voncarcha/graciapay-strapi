@@ -514,6 +514,77 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMerchantFormMerchantForm
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'merchant_forms';
+  info: {
+    displayName: 'Merchant Form';
+    pluralName: 'merchant-forms';
+    singularName: 'merchant-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    averageTransactionValuePhp: Schema.Attribute.Integer;
+    bankAccountName: Schema.Attribute.String;
+    bankAccountNumber: Schema.Attribute.String;
+    bankBranch: Schema.Attribute.String;
+    bankCertificateFiles: Schema.Attribute.Media<'images' | 'files'>;
+    bankName: Schema.Attribute.String;
+    bir2303Files: Schema.Attribute.Media<'images' | 'files'>;
+    brandName: Schema.Attribute.String;
+    businessAddress: Schema.Attribute.Text;
+    businessEmail: Schema.Attribute.Email;
+    businessLogoFiles: Schema.Attribute.Media<'images' | 'files'>;
+    businessName: Schema.Attribute.String;
+    businessPhoneNumber: Schema.Attribute.String;
+    businessRegFiles: Schema.Attribute.Media<'images' | 'files'>;
+    cityProvince: Schema.Attribute.String;
+    consentDate: Schema.Attribute.Date;
+    consentFullName: Schema.Attribute.String;
+    countryOfRegistration: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    estimatedMonthlySalesPhp: Schema.Attribute.Integer;
+    idExpirationDate: Schema.Attribute.Date;
+    idIssuanceDate: Schema.Attribute.Date;
+    idNumber: Schema.Attribute.String;
+    idType: Schema.Attribute.String;
+    industry: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::merchant-form.merchant-form'
+    > &
+      Schema.Attribute.Private;
+    mayorOrBarangayFiles: Schema.Attribute.Media<'images' | 'files'>;
+    natureOfBusiness: Schema.Attribute.String;
+    ownerDateOfBirth: Schema.Attribute.Date;
+    ownerDesignation: Schema.Attribute.String;
+    ownerEmail: Schema.Attribute.Email;
+    ownerFullName: Schema.Attribute.String;
+    ownerIdFiles: Schema.Attribute.Media<'images' | 'files'>;
+    ownerMobileNumber: Schema.Attribute.String;
+    paymentChannels: Schema.Attribute.Text;
+    productPhotosFiles: Schema.Attribute.Media<'images' | 'files', true>;
+    projectedTransactionsPerMonth: Schema.Attribute.Integer;
+    publishedAt: Schema.Attribute.DateTime;
+    receiptOrInvoiceFiles: Schema.Attribute.Media<'images' | 'files'>;
+    registrationDate: Schema.Attribute.Date;
+    registrationNumber: Schema.Attribute.String;
+    registrationType: Schema.Attribute.String;
+    signatureFile: Schema.Attribute.Media<'images'>;
+    tin: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    websiteOrSocial: Schema.Attribute.String;
+    zipCode: Schema.Attribute.Integer;
+  };
+}
+
 export interface ApiOfferOffer extends Struct.CollectionTypeSchema {
   collectionName: 'offers';
   info: {
@@ -1082,6 +1153,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::merchant-form.merchant-form': ApiMerchantFormMerchantForm;
       'api::offer.offer': ApiOfferOffer;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'plugin::content-releases.release': PluginContentReleasesRelease;
