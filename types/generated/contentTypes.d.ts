@@ -430,38 +430,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
-  collectionName: 'globals';
-  info: {
-    description: 'Define global settings';
-    displayName: 'Global';
-    pluralName: 'globals';
-    singularName: 'global';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
-    favicon: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::global.global'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    siteName: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -475,6 +443,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   attributes: {
     about_content: Schema.Attribute.RichText;
     about_heading: Schema.Attribute.String;
+    about_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     comparison_heading: Schema.Attribute.String;
     comparison_subheading: Schema.Attribute.Text;
     contact_email: Schema.Attribute.String;
@@ -484,9 +455,14 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     facebook_link: Schema.Attribute.String;
     footer_content: Schema.Attribute.RichText;
+    footer_red_heading: Schema.Attribute.String;
+    footer_red_subheading: Schema.Attribute.Text;
     hero_button_link: Schema.Attribute.String;
     hero_button_text: Schema.Attribute.String;
     hero_heading: Schema.Attribute.String;
+    hero_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     hero_subheading: Schema.Attribute.Text;
     instagram_link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -496,8 +472,14 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     offer_heading: Schema.Attribute.String;
+    offer_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     requirements_heading: Schema.Attribute.String;
+    requirements_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     services_heading: Schema.Attribute.String;
     services_subheading: Schema.Attribute.Text;
     services_text: Schema.Attribute.Text;
@@ -505,6 +487,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     step_2: Schema.Attribute.Text;
     step_3: Schema.Attribute.Text;
     steps_heading: Schema.Attribute.String;
+    steps_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     testimonial_heading: Schema.Attribute.String;
     twitter_link: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1151,7 +1136,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::merchant-form.merchant-form': ApiMerchantFormMerchantForm;
       'api::offer.offer': ApiOfferOffer;

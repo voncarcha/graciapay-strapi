@@ -20,14 +20,47 @@
     "hero_button_text": {
       "type": "string"
     },
+    "hero_button_link": {
+      "type": "string"
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "about_heading": {
       "type": "string"
     },
     "about_content": {
       "type": "richtext"
     },
+    "about_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "offer_heading": {
       "type": "string"
+    },
+    "offer_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "services_heading": {
       "type": "string"
@@ -40,6 +73,16 @@
     },
     "requirements_heading": {
       "type": "string"
+    },
+    "requirements_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "comparison_heading": {
       "type": "string"
@@ -62,11 +105,18 @@
     "step_3": {
       "type": "text"
     },
+    "steps_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "footer_content": {
       "type": "richtext"
-    },
-    "hero_button_link": {
-      "type": "string"
     },
     "contact_email": {
       "type": "string"
@@ -85,6 +135,12 @@
     },
     "twitter_link": {
       "type": "string"
+    },
+    "footer_red_heading": {
+      "type": "string"
+    },
+    "footer_red_subheading": {
+      "type": "text"
     }
   }
 }
